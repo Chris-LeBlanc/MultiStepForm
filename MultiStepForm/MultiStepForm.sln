@@ -1,9 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36119.2 d17.14
+VisualStudioVersion = 17.14.36119.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm", "MultiStepForm.csproj", "{188C5D83-DD84-426F-8C5F-95FF53D5322A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm.Web", "MultiStepForm.Web.csproj", "{188C5D83-DD84-426F-8C5F-95FF53D5322A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm.DAL", "..\MultiStepForm.DAL\MultiStepForm.DAL.csproj", "{9EDB34F8-BFC2-4D30-AE35-6D8AD45B81BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm.Model", "..\MultiStepForm.Model\MultiStepForm.Model.csproj", "{B1D1A7E5-C677-4402-AC77-9A0238E8A022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm.Repository", "..\MultiStepForm.Repository\MultiStepForm.Repository.csproj", "{D2C80773-E09B-4557-A6BE-DAB2EB186D52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm.Service", "..\MultiStepForm.Service\MultiStepForm.Service.csproj", "{24465D85-9CF3-4E9A-95EE-C241D4E01D96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepForm.Types", "..\MultiStepForm.Types\MultiStepForm.Types.csproj", "{D2FBDE40-B63F-47F8-B2FD-C88BE76AADF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{188C5D83-DD84-426F-8C5F-95FF53D5322A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{188C5D83-DD84-426F-8C5F-95FF53D5322A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{188C5D83-DD84-426F-8C5F-95FF53D5322A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EDB34F8-BFC2-4D30-AE35-6D8AD45B81BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EDB34F8-BFC2-4D30-AE35-6D8AD45B81BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EDB34F8-BFC2-4D30-AE35-6D8AD45B81BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EDB34F8-BFC2-4D30-AE35-6D8AD45B81BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D1A7E5-C677-4402-AC77-9A0238E8A022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D1A7E5-C677-4402-AC77-9A0238E8A022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D1A7E5-C677-4402-AC77-9A0238E8A022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D1A7E5-C677-4402-AC77-9A0238E8A022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C80773-E09B-4557-A6BE-DAB2EB186D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C80773-E09B-4557-A6BE-DAB2EB186D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C80773-E09B-4557-A6BE-DAB2EB186D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C80773-E09B-4557-A6BE-DAB2EB186D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24465D85-9CF3-4E9A-95EE-C241D4E01D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24465D85-9CF3-4E9A-95EE-C241D4E01D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24465D85-9CF3-4E9A-95EE-C241D4E01D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24465D85-9CF3-4E9A-95EE-C241D4E01D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2FBDE40-B63F-47F8-B2FD-C88BE76AADF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FBDE40-B63F-47F8-B2FD-C88BE76AADF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FBDE40-B63F-47F8-B2FD-C88BE76AADF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FBDE40-B63F-47F8-B2FD-C88BE76AADF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
