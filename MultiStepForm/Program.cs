@@ -1,3 +1,5 @@
+using DAL;
+
 namespace MultiStepForm
 {
     public class Program
@@ -9,7 +11,13 @@ namespace MultiStepForm
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // Register Repistories
+            builder.Services.AddScoped<IDataAccess, DataAccess>();
+
+            // Register Services
+
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

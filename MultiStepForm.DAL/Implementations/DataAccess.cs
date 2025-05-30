@@ -18,7 +18,7 @@ namespace DAL
         public DataAccess()
         {
             var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            connectionString = builder.Build().GetConnectionString("TLGConnStr");
+            connectionString = builder.Build().GetConnectionString("MultiStepFormConnStr");
         }
         #endregion
 

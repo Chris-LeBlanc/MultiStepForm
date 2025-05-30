@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MultiStepForm.DAL\MultiStepForm.DAL.csproj" />
+    <ProjectReference Include="..\MultiStepForm.Repository\MultiStepForm.Repository.csproj" />
+    <ProjectReference Include="..\MultiStepForm.Service\MultiStepForm.Service.csproj" />
+  </ItemGroup>
+
 </Project>
