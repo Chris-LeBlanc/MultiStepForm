@@ -19,31 +19,31 @@ namespace MultiStepForm.Types
             Size = size;
             Direction = direction;
         }
+    }
 
-        public enum ErrorType
-        {
-            Model,
-            Business
-        }
+    public enum ErrorType
+    {
+        Model,
+        Business
+    }
 
-        public enum BillingType
-        {
-            Monthly,
-            Yearly
-        }
+    public enum BillingType
+    {
+        Monthly,
+        Yearly
+    }
 
-        public enum Plan
-        {
-            Arcade,
-            Advanced,
-            Pro
-        }
+    public enum Plan
+    {
+        Arcade,
+        Advanced,
+        Pro
+    }
 
-        public enum AddOns
-        {
-            OnlineService,
-            LargerStorage,
-            CustomizableProfile
-        }
+    public enum AddOns
+    {
+        OnlineService,
+        LargerStorage,
+        CustomizableProfile
     }
 }
