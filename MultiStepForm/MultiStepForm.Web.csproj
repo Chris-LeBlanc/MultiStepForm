@@ -8,8 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MultiStepForm.DAL\MultiStepForm.DAL.csproj" />
-    <ProjectReference Include="..\MultiStepForm.Repository\MultiStepForm.Repository.csproj" />
-    <ProjectReference Include="..\MultiStepForm.Service\MultiStepForm.Service.csproj" />
+    <ProjectReference Include="..\MultiStepForm.Types\MultiStepForm.Types.csproj" />
   </ItemGroup>
 
 </Project>
