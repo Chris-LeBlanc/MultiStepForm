@@ -1,5 +1,20 @@
+:root {
+    --primary-blue: hsl(213, 96%, 18%);
+    --primary-purple: hsl(243, 100%, 62%);
+    --seconadry-blue: hsl(228, 100%, 84%);
+    --teriary-blue: hsl(206, 94%, 87%);
+    --secondary-red: hsl(354, 84%, 57%);
+    --neutral-grey: hsl(231, 11%, 63%);
+    --neutral-purple: hsl(229, 24%, 87%);
+    --neutral-blue: hsl(218, 100%, 97%);
+    --neutral-blue-light: hsl(231, 100%, 99%);
+    --white: hsl(0, 100%, 100%);
+
+    --fs-neutal: 16px;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
