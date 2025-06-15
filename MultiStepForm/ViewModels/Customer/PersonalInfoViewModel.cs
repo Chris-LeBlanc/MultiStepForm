@@ -14,6 +14,7 @@ namespace MultiStepForm.Web.ViewModels.Customer
 
         [Required]
         [RegularExpression(@"\(\d{3}\) \d{3}-\d{4}", ErrorMessage = "Phone number must match the pattern: (NNN) NNN-NNNN")]
+        [Display(Name = "Phone Number")]
         public string? PhoneNumber { get; set; }
     }
 }

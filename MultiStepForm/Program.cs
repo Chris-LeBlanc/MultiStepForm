@@ -36,7 +36,7 @@ namespace MultiStepForm
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Customer}/{action=SignUp_Step1}/{id?}");
 
             app.Run();
         }

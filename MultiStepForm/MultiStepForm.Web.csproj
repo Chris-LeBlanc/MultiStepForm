@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\bg-sidebar-desktop.svg" />
+    <None Include="wwwroot\images\bg-sidebar-mobile.svg" />
+    <None Include="wwwroot\images\favicon-32x32.png" />
+    <None Include="wwwroot\images\icon-advanced.svg" />
+    <None Include="wwwroot\images\icon-arcade.svg" />
+    <None Include="wwwroot\images\icon-checkmark.svg" />
+    <None Include="wwwroot\images\icon-pro.svg" />
+    <None Include="wwwroot\images\icon-thank-you.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MultiStepForm.DAL\MultiStepForm.DAL.csproj" />
     <ProjectReference Include="..\MultiStepForm.Types\MultiStepForm.Types.csproj" />
   </ItemGroup>

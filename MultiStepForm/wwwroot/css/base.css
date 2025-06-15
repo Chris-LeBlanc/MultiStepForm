@@ -1,0 +1,39 @@
+﻿:root {
+    /*    Primary Colors */
+    --primary-blue: hsl(213, 96%, 18%);
+    --primary-purple: hsl(243, 100%, 62%);
+    --tertiary-blue: hsl(206, 94%, 87%);
+    --teriary-blue: hsl(206, 94%, 87%);
+    --secondary-red: hsl(354, 84%, 57%);
+    --neutral-grey: hsl(231, 11%, 63%);
+    --neutral-purple: hsl(229, 24%, 87%);
+    --neutral-blue: hsl(218, 100%, 97%);
+    --neutral-blue-light: hsl(231, 100%, 99%);
+    --white: hsl(0, 100%, 100%);
+    --fs-neutal: 16px;
+    /*    Neutral Colors*/
+    --neutral-grey-500: hsl(231, 11%, 63%)
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+h1, p {
+    color: var(--primary-blue);
+}
