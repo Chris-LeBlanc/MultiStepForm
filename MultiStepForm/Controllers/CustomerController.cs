@@ -1,19 +1,10 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using MultiStepForm.Models;
 using MultiStepForm.Web.ViewModels.Customer;
 
 namespace MultiStepForm.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly ILogger<CustomerController> _logger;
-
-        public CustomerController(ILogger<CustomerController> logger)
-        {
-            _logger = logger;
-        }
-
         [HttpGet]
         public IActionResult SignUp_Step1()
         {
@@ -21,13 +12,24 @@ namespace MultiStepForm.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignUp_Step1(PersonalInfoViewModel customer) 
-        { 
+        public IActionResult SignUp_Step1(PersonalInfoViewModel customer)
+        {
             if (!ModelState.IsValid)
             {
                 return View();
             }
 
+            TempData["Name"] = customer.Name;
+            TempData["Email"] = customer.Email;
+            TempData["Phone"] = customer.PhoneNumber;
+
+
+            return RedirectToAction("SignUp_Step2");
+        }
+
+        [HttpGet]
+        public IActionResult SignUp_Step2()
+        {
             return View();
         }
 

@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.5" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultiStepForm.DAL\MultiStepForm.DAL.csproj" />
+    <ProjectReference Include="..\MultiStepForm.Model\MultiStepForm.Model.csproj" />
   </ItemGroup>
 
 </Project>

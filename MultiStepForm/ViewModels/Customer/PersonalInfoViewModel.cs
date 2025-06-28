@@ -4,6 +4,8 @@ namespace MultiStepForm.Web.ViewModels.Customer
 {
     public class PersonalInfoViewModel
     {
+        // public int Id {get; set;}
+
         [Required]
         [StringLength(3, ErrorMessage = "Name must be at least 3 characters in length")]
         public string? Name { get; set; }

@@ -31,10 +31,17 @@ section {
     opacity: 0.90;
 }
 
+.image-container {
+    position: relative;
+}
+
 .nav-container {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    position: absolute;
+    top: 25%;
+    left: 28%;
 }
 
 .selected {
@@ -56,11 +63,13 @@ section {
     font-weight: bold;
 }
 
+
 .nav-text {
-    color: var(--primary-blue);
+    color: var(--white);
     text-transform: uppercase;
 }
 
 .nav-text p {
     margin-bottom: 0;
+    color: var(--white);
 }

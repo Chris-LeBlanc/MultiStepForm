@@ -1,5 +1,5 @@
 ﻿using System.Data;
-
+using System.Text.Json;
 
 namespace MultiStepForm.Types
 {
@@ -46,4 +46,18 @@ namespace MultiStepForm.Types
         LargerStorage,
         CustomizableProfile
     }
+
+    // public static class SessionExtensions
+    // {
+    //     public static void SetObject<T>(ISession session, string key, T value)
+    //     {
+    //         session.SetString(key, JsonSerializer.Serialize(value));
+    //     }
+
+    //     public static T GetObject<T>(ISession session, string key)
+    //     {
+    //         var value = session.GetString(key);
+    //         return value == null ? default : JsonSerializer.Deserialize<T>(value);
+    //     }
+    // }
 }
