@@ -1,4 +1,7 @@
-﻿using System.Data;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 
 namespace MultiStepForm.Types
@@ -42,8 +45,11 @@ namespace MultiStepForm.Types
 
     public enum AddOns
     {
+        [Display(Name = "Online Services")]
         OnlineService,
+        [Display(Name = "Large Storage")]
         LargerStorage,
+        [Display(Name = "Customizable Profile")]
         CustomizableProfile
     }
 
