@@ -7,7 +7,7 @@ namespace MultiStepForm.Web.ViewModels.Customer
         // public int Id {get; set;}
 
         [Required]
-        [StringLength(1, MinimumLength = 3, ErrorMessage = "Name must be at least 3 characters in length")]
+        [StringLength(30, MinimumLength = 3, ErrorMessage = "Name must be at least 3 characters in length")]
         public string? Name { get; set; }
 
         [Required]

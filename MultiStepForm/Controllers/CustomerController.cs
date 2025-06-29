@@ -30,8 +30,6 @@ namespace MultiStepForm.Controllers
         [HttpGet]
         public IActionResult SignUp_Step2()
         {
-            var test = HttpContext.Session.GetString("Name");
-
             
             return View();
         }
