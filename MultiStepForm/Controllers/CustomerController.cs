@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using MultiStepForm.Types;
 using MultiStepForm.Web.ViewModels.Customer;
-using MultiStepForm.Web.ViewModels;
 
 namespace MultiStepForm.Controllers
 {
@@ -30,8 +30,12 @@ namespace MultiStepForm.Controllers
         [HttpGet]
         public IActionResult SignUp_Step2()
         {
-            
-            return View();
+            var vm = new PlanSelectViewModel
+            {
+                Plans = Enum.GetValues(typeof(Plan)).Cast<Plan>().ToList(),
+            };
+
+            return View("SignUp_Step2", vm);
         }
 
     }
