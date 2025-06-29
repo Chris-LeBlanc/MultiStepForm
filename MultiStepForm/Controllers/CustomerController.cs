@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MultiStepForm.Web.ViewModels.Customer;
+using MultiStepForm.Web.ViewModels;
 
 namespace MultiStepForm.Controllers
 {
@@ -19,10 +20,9 @@ namespace MultiStepForm.Controllers
                 return View();
             }
 
-            TempData["Name"] = customer.Name;
-            TempData["Email"] = customer.Email;
-            TempData["Phone"] = customer.PhoneNumber;
-
+            HttpContext.Session.SetString("Name", customer.Name!);
+            HttpContext.Session.SetString("Email", customer.Email!);
+            HttpContext.Session.SetString("Phone", customer.PhoneNumber!);
 
             return RedirectToAction("SignUp_Step2");
         }
@@ -30,6 +30,9 @@ namespace MultiStepForm.Controllers
         [HttpGet]
         public IActionResult SignUp_Step2()
         {
+            var test = HttpContext.Session.GetString("Name");
+
+            
             return View();
         }
 

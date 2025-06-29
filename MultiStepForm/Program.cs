@@ -14,6 +14,12 @@ namespace MultiStepForm
             // Register Repistories
             builder.Services.AddScoped<IDataAccess, DataAccess>();
 
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+
             // Register Services
 
             var app = builder.Build();
@@ -31,7 +37,7 @@ namespace MultiStepForm
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthorization();
 
             app.MapControllerRoute(
