@@ -48,14 +48,16 @@
                 </div>
             </div>
             </div>
-            <div class="form-container">
-                <form method="post">
+            @* <div> *@
+                <form action="SignUp_Step2" method="post" class="form-container">
+                <div>
                     <h1>Select your plan</h1>
                     <p>You have option of monthly or yearly billing</thead></p>
+                </div>
                 <div class="plan-options">
                     @foreach (var plan in Model.Plans)
                     {
-                        string planId = $"plan_{plan}";
+                        var planId = $"plan_{plan}";
                         <input type="radio" name="SelectedPlan" value="@plan" id="@planId" 
                         @(Model.SelectedPlan == plan ? "checked" : "") />
                     <label for="@planId">@plan.ToString()</label>
@@ -65,9 +67,9 @@
                     <input type="checkbox">
                     <span class="slider round"></span>
                 </label>
-                <button type="submit">Continue</button>
+                <button class="btn step1-btn" type="submit">Continue</button>
                 </form>
-            </div>
+            @* </div> *@
         </section>
     </main>
 </body>
