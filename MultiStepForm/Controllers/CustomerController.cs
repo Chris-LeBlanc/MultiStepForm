@@ -38,5 +38,22 @@ namespace MultiStepForm.Controllers
             return View("SignUp_Step2", vm);
         }
 
+        [HttpPost]
+        public IActionResult SignUp_Step2(PlanSelectViewModel plan)
+        {
+            if (!ModelState.IsValid)
+            {
+                var vm = new PlanSelectViewModel
+                {
+                    Plans = Enum.GetValues(typeof(Plan)).Cast<Plan>().ToList(),
+                };
+
+                return View("SignUp_Step2", vm);
+            }
+                
+
+            return View("SignUp_Step3");
+        }
+
     }
 }

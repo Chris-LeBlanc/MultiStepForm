@@ -10,6 +10,6 @@ namespace MultiStepForm.Web.ViewModels.Customer
 
         public Plan SelectedPlan { get; set; }
 
-        public BillingType BillingType { get; set; }
+        public bool BillingType { get; set; }
     }
 }
