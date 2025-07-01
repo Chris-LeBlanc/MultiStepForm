@@ -1,6 +1,5 @@
 ﻿@model MultiStepForm.Web.ViewModels.Customer.PlanSelectViewModel
 
-
 <body>
     <main>
         <section class="d-flex justify-content-evenly align-items-center flex-row">
@@ -8,10 +7,9 @@
                 <picture>
                     <img src="~/images/bg-sidebar-desktop.svg" />
                 </picture>
-            </div>
             <div class="nav-container">
                 <div class="d-flex flex-row gap-3">
-                    <div class="rounded-circle selected">
+                    <div class="rounded-circle not-selected">
                         1
                     </div>
                     <div class="nav-text">
@@ -20,12 +18,15 @@
                     </div>
                 </div>
                 <div class="d-flex flex-row gap-3">
-                    <div class="rounded-circle not-selected">
+                    <div class="rounded-circle selected">
                         2
                     </div>
                     <div class="nav-text">
-                    <h5>Select Plan</h5>
+                        <p>Step 2</p>
+                        <h5>Select Plan</h5>
                     </div>
+                </div>
+
                 <div class="d-flex flex-row gap-3">
                     <div class="rounded-circle not-selected">
                         3
@@ -46,21 +47,19 @@
                     </div>
                 </div>
             </div>
+            </div>
             <div class="form-container">
-                <form asp-action="SignUp_Step2" asp-controller="Customer" class="d-flex flex-column gap-3"
-                    method="POST">    <div>
-                     @foreach (var plan in Model.Plans!) 
-                     {
-                        var id = $"{plan}";
-                        <input type="radio"
-                        id="@id"
-                        name="SelectedPlan"
-                        value="@plan"
-                        @(Model.SelectedPlan == plan ? "checked" : "")/>
-                        <label asp-for="@id">@plan</label>
-                     }
-                     
-                    <input type="submit" class="btn step1-btn" value="Next" />
+                <form method="post">
+                <div class="plan-options">
+                    @foreach (var plan in Model.Plans)
+                    {
+                        string planId = $"plan_{plan}";
+                        <input type="radio" name="SelectedPlan" value="@plan" id="@planId" 
+                        @(Model.SelectedPlan == plan ? "checked" : "") />
+                    <label for="@planId">@plan.ToString()</label>
+                    }
+                </div>
+                <button type="submit">Continue</button>
                 </form>
             </div>
         </section>

@@ -35,13 +35,20 @@ section {
     position: relative;
 }
 
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .nav-container {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     position: absolute;
-    top: 25%;
-    left: 28%;
+    top: 0;
+    left: 0;
+    padding: 1rem 1rem;
 }
 
 .selected {
