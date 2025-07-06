@@ -38,9 +38,9 @@ namespace MultiStepForm.Types
 
     public enum Plan
     {
-        Arcade,
-        Advanced,
-        Pro
+        Arcade = 9,
+        Advanced = 12,
+        Pro = 15
     }
 
     public enum AddOns
