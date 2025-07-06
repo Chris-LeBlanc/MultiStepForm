@@ -5,11 +5,12 @@ namespace MultiStepForm.Web.ViewModels.Customer
 {
     public class PlanSelectViewModel
     {
-        [Required]
+        
         public List<Plan>? Plans { get; set; }
 
+        [Required]
         public Plan SelectedPlan { get; set; }
 
-        public bool BillingType { get; set; }
+        public bool BillingType { get; set; } = false;
     }
 }
