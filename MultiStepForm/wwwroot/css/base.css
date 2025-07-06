@@ -10,9 +10,11 @@
     --neutral-blue: hsl(218, 100%, 97%);
     --neutral-blue-light: hsl(231, 100%, 99%);
     --white: hsl(0, 100%, 100%);
-    --fs-neutal: 16px;
+    --fs-neutal: 1em;
     /*    Neutral Colors*/
     --neutral-grey-500: hsl(231, 11%, 63%)
+
+    --fs-small: 0.8em;
 }
 
 @media (min-width: 768px) {

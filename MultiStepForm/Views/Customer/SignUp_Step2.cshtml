@@ -1,11 +1,12 @@
-﻿@model MultiStepForm.Web.ViewModels.Customer.PlanSelectViewModel
+﻿@using MultiStepForm.Types
+@model MultiStepForm.Web.ViewModels.Customer.PlanSelectViewModel
 
 <body>
     <main>
         <section class="d-flex justify-content-evenly align-items-center flex-row">
             <div class="image-container">
                 <picture>
-                    <img src="~/images/bg-sidebar-desktop.svg" />
+                    <img src="~/images/bg-sidebar-desktop.svg" alt="side-bar" />
                 </picture>
                 <div class="nav-container">
                     <div class="d-flex flex-row gap-3">
@@ -58,9 +59,30 @@
                     @foreach (var plan in Model.Plans)
                     {
                         var planId = $"plan_{plan}";
-                        <input type="radio" name="SelectedPlan" value="@plan" id="@planId"
-                        @(Model.SelectedPlan == plan ? "checked" : "") />
-                    <label for="@planId" class="planOptions">@plan.ToString()</label>
+                        <input type="radio" name="SelectedPlan" value="@plan" id="@planId" />
+                        <label for="@planId" class="planOptions">
+                            <div>
+                                @switch (@plan)
+                                {
+                                    case Plan.Arcade:
+                                        <img src="~/images/icon-arcade.svg" alt="arcade">
+                                        break;
+                                    case Plan.Advanced:
+                                        <img src="~/images/icon-advanced.svg" alt="advanced">
+                                        break;
+                                    case Plan.Pro:
+                                        <img src="~/images/icon-pro.svg" alt="pro">
+                                        break;
+                                }
+                            </div>
+                            <div>
+                                @plan.ToString() <br>
+                                <span class="planPricing">
+                                    @((int)plan)
+                                </span>
+                            </div>
+                        </label>
+
                     }
                 </div>
                 <label class="switch">
@@ -76,8 +98,8 @@
 <script>
     const planOptions = document.querySelectorAll(".planOptions");
 
-    planOptions.forEach(function(p) {
-        p.addEventListener("click", function() {
+    planOptions.forEach(function (p) {
+        p.addEventListener("click", function () {
             p.classList.toggle("active");
         })
     })
