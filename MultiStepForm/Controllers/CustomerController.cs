@@ -50,9 +50,23 @@ namespace MultiStepForm.Controllers
 
                 return View("SignUp_Step2", vm);
             }
-                
+
+
+            HttpContext.Session.SetString("Plan", plan.SelectedPlan.ToString());
+            HttpContext.Session.SetString("BillingType", plan.BillingType.ToString());
 
             return View("SignUp_Step3");
+        }
+
+        [HttpGet]
+        public IActionResult SignUp_Step3()
+        {
+            var vm = new AddOnViewModel
+            {
+                AddOn = Enum.GetValues(typeof(AddOns)).Cast<AddOns>().ToList()
+            };
+
+            return View("SignUp_Step3", vm);
         }
 
     }
