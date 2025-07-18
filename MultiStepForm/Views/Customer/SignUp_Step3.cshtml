@@ -57,10 +57,10 @@
                     {
                         var addonId = $"addon_{addon}";
                         <label for="@addonId" class="addon-container">
-                            <input type="checkbox" name="SelectedAddOns" value="@addon" id="@addonId" @(Model.SelectedAddOn
+                            <input type="checkbox" name="SelectedAddOn" value="@addon.ToString()" id="@addonId" @(Model.SelectedAddOn
                             != null && Model.SelectedAddOn.Contains(addon) ? "checked" : "") />
                             <div class="addon-content">
-                                @switch (addon)
+                                @switch (@addon)
                                 {
                                     case AddOns.OnlineService:
                                         <h3>@addon.ToString()</h3>
