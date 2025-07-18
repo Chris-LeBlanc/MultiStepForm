@@ -36,59 +36,64 @@
                             <h5>Add Ons</h5>
                         </div>
                     </div>
-                        <div class="d-flex flex-row gap-3">
-                            <div class="rounded-circle not-selected">
-                                4
-                            </div>
-                            <div class="nav-text">
-                                <p>Step 4</p>
-                                <h5>Summary</h5>
-                            </div>
+                    <div class="d-flex flex-row gap-3">
+                        <div class="rounded-circle not-selected">
+                            4
+                        </div>
+                        <div class="nav-text">
+                            <p>Step 4</p>
+                            <h5>Summary</h5>
                         </div>
                     </div>
                 </div>
             </div>
-            <form asp-action="SignUp_Step3" method="POST" class="d-flex">
+            <form asp-action="SignUp_Step3" method="POST" class="d-flex flex-column">
                 <div>
-                    <h1>Pick add-ons</h1>
+                    <h1>Pick add-ons</h1><br>
                     <p>help enhance your gaming experience</p>
                 </div>
-                @* <div> *@
-                    <div class="addons-container">
-                        @foreach (var addon in Model.AddOn!)
-                        {
-                            var addonId = $"addon_{addon}";
-
+                <div class="addons-container">
+                    @foreach (var addon in Model.AddOn!)
+                    {
+                        var addonId = $"addon_{addon}";
+                        <label for="@addonId" class="addon-container">
                             <input type="checkbox" name="SelectedAddOns" value="@addon" id="@addonId" @(Model.SelectedAddOn
                             != null && Model.SelectedAddOn.Contains(addon) ? "checked" : "") />
-
-                            <label for="@addonId" class="addon-container">
-                                <div>
-                                    @switch (addon)
-                                    {
-                                        case AddOns.OnlineService:
-                                            <h3>@addon.ToString()</h3>
-                                            <p>Access to Multiplayer Games</p>
-                                            <span>+$1/mo</span>
-                                            break;
-                                        case AddOns.LargerStorage:
-                                            <h3>@addon.ToString()</h3>
-                                            <p>Extra 1TB of Cloud Save</p>
-                                            <span>+$2/mo</span>
-                                            break;
-                                        case AddOns.CustomizableProfile:
-                                            <h3>@addon.ToString()</h3>
-                                            <p>Customize Theme on Your Profile</p>
-                                            <span>+$3/mo</span>
-                                            break;
-                                    }
-                                </div>
-                            </label>
-                        }
-                    </div>
+                            <div class="addon-content">
+                                @switch (addon)
+                                {
+                                    case AddOns.OnlineService:
+                                        <h3>@addon.ToString()</h3>
+                                        <p>Access to Multiplayer Games</p>
+                                        <span>+$1/mo</span>
+                                        break;
+                                    case AddOns.LargerStorage:
+                                        <h3>@addon.ToString()</h3>
+                                        <p>Extra 1TB of Cloud Save</p>
+                                        <span>+$2/mo</span>
+                                        break;
+                                    case AddOns.CustomizableProfile:
+                                        <h3>@addon.ToString()</h3>
+                                        <p>Customize Theme on Your Profile</p>
+                                        <span>+$3/mo</span>
+                                        break;
+                                }
+                            </div>
+                        </label>
+                    }
                     <button class="btn step1-btn" type="submit">Continue</button>
-                @* </div> *@
+                </div>
             </form>
         </section>
     </main>
 </body>
+
+<script>
+    const addOnOptions = document.querySelectorAll("label");
+
+    addOnOptions.forEach(function (p) {
+        p.addEventListener("click", function () {
+            p.classList.toggle("active");
+        })
+    })
+</script>

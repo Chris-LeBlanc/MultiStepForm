@@ -1,4 +1,24 @@
 .addon-container {
-    display: block;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 1em;
     color: #000;
+    width: 200%;
+    padding: 1em;
+}
+
+.addon-container label {
+    border: solid 2px var(--neutral-purple);
+    padding: 1em;
+}
+
+.addon-container input[type="checkbox"] {
+    margin-top: 0.5rem; 
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.addon-content {
+    flex: 1;
 }
