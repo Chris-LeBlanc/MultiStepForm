@@ -69,5 +69,23 @@ namespace MultiStepForm.Controllers
             return View("SignUp_Step3", vm);
         }
 
+        [HttpPost]
+        public IActionResult SignUp_Step3(AddOnViewModel addons)
+        {
+            if (!ModelState.IsValid)
+            {
+                var vm = new AddOnViewModel
+                {
+                    AddOn = Enum.GetValues(typeof(AddOns)).Cast<AddOns>().ToList(),
+                };
+
+                return View("SignUp_Step3", vm);
+            }
+
+            HttpContext.Session.SetString("Addon", addons.AddOn.ToString());
+
+            return View("SignUp_Step4");
+        }
+
     }
 }
