@@ -32,8 +32,8 @@ namespace MultiStepForm.Types
 
     public enum BillingType
     {
-        Monthly,
-        Yearly
+        Monthly = 0,
+        Yearly = 1
     }
 
     public enum Plan
@@ -46,10 +46,10 @@ namespace MultiStepForm.Types
     public enum AddOns
     {
         [Display(Name = "Online Services")]
-        OnlineService,
+        OnlineService = 0,
         [Display(Name = "Large Storage")]
-        LargerStorage,
+        LargerStorage = 1,
         [Display(Name = "Customizable Profile")]
-        CustomizableProfile
+        CustomizableProfile = 2
     }
 }
