@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="DTOs\" />
+    <ProjectReference Include="..\MultiStepForm.Types\MultiStepForm.Types.csproj" />
   </ItemGroup>
 
 </Project>

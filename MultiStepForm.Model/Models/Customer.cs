@@ -3,7 +3,7 @@ using MultiStepForm.Types;
 
 namespace MultiStepForm.Model
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
         public int Id { get; set; }
 
