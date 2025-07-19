@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MultiStepForm.DAL\MultiStepForm.DAL.csproj" />
+    <ProjectReference Include="..\MultiStepForm.Model\MultiStepForm.Model.csproj" />
+    <ProjectReference Include="..\MultiStepForm.Repository\MultiStepForm.Repository.csproj" />
   </ItemGroup>
 
 </Project>
