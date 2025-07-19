@@ -15,10 +15,10 @@ namespace MultiStepForm.Model
 
         public string? PhoneNumber { get; set; }
 
-        public Plan Plan { get; set; }
+        public int Plan { get; set; }
 
-        public AddOns AddOn { get; set; }
+        public int AddOn { get; set; }
 
-        public BillingType BillingType { get; set; }
+        public int BillingType { get; set; }
     }
 }

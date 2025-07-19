@@ -6,9 +6,9 @@ namespace MultiStepForm.Web.ViewModels.Customer
 {
     public class AddOnViewModel
     {
-        public List<AddOns>? AddOn { get; set; }
+        public List<int>? AddOn { get; set; }
         
         [BindProperty]
-        public List<AddOns>? SelectedAddOn { get; set; }
+        public List<int>? SelectedAddOn { get; set; }
     }
 }

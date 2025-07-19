@@ -32,7 +32,7 @@ namespace MultiStepForm.Controllers
         {
             var vm = new PlanSelectViewModel
             {
-                Plans = Enum.GetValues(typeof(Plan)).Cast<Plan>().ToList(),
+                Plans = Enum.GetValues(typeof(int)).Cast<int>().ToList()
             };
 
             return View("SignUp_Step2", vm);
@@ -45,7 +45,7 @@ namespace MultiStepForm.Controllers
             {
                 var vm = new PlanSelectViewModel
                 {
-                    Plans = Enum.GetValues(typeof(Plan)).Cast<Plan>().ToList(),
+                    Plans = Enum.GetValues(typeof(int)).Cast<int>().ToList(),
                 };
 
                 return View("SignUp_Step2", vm);
@@ -63,7 +63,7 @@ namespace MultiStepForm.Controllers
         {
             var vm = new AddOnViewModel
             {
-                AddOn = Enum.GetValues(typeof(AddOns)).Cast<AddOns>().ToList()
+                AddOn = Enum.GetValues(typeof(int)).Cast<int>().ToList()
             };
 
             return View("SignUp_Step3", vm);
@@ -76,7 +76,7 @@ namespace MultiStepForm.Controllers
             {
                 var vm = new AddOnViewModel
                 {
-                    AddOn = Enum.GetValues(typeof(AddOns)).Cast<AddOns>().ToList(),
+                    AddOn = Enum.GetValues(typeof(int)).Cast<int>().ToList(),
                 };
 
                 return View("SignUp_Step3", vm);
