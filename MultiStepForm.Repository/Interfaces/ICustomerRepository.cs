@@ -9,6 +9,8 @@ namespace MultiStepForm.Repository
 {
     public interface ICustomerRepository
     {
-        public Task<Customer> Insert();
+        Task<Customer> InsertAsync(Customer customer);
+
+        Task<bool> DoesEmailExistAsync(string email);
     }
 }
